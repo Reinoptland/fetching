@@ -6,7 +6,7 @@ import "./App.css";
 function App() {
   // const [getter (get the state), setter (change the state)] = useState(initialState)
   const [count, setCount] = useState(0);
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState();
 
   // every time my component is rendered my useEffect is called
   // useEffect(() => {
@@ -39,19 +39,25 @@ function App() {
   console.log("POSTS IN RENDER", posts);
   // [{}, {}] -> React Component, React Component
 
+  // if (posts === undefined) {
+  //   return "Loading";
+  // }
+
   return (
     <div className="App">
       <header className="App-header">
-        {posts.map((post) => {
-          // return <div>{post}</div>; // not allowed, object cannot be interpolated
-          return (
-            // add a key, to make React's life easier, it can more easily compare what changed
-            <div key={post.id}>
-              <h3>{post.title}</h3>
-              <p>{post.body}</p>
-            </div>
-          );
-        })}
+        {posts === undefined
+          ? "Loading"
+          : posts.map((post) => {
+              // return <div>{post}</div>; // not allowed, object cannot be interpolated
+              return (
+                // add a key, to make React's life easier, it can more easily compare what changed
+                <div key={post.id}>
+                  <h3>{post.title}</h3>
+                  <p>{post.body}</p>
+                </div>
+              );
+            })}
         {count}
         <button onClick={increaseCount}>+</button>
       </header>
