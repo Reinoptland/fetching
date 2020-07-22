@@ -40,10 +40,13 @@ countWithoutSideEffect(3); // -> return 4
   - or multiple times -> dependency array (we will explain)
 
 - How do we use a useEffect hook to fetch data
-  1. npm install axios (to fetch data)
-  2. first import the useEffect hook
-  3. we need to import useState, because our fetched data will be stored as a state (it is dynamic data)
-  4. use the useEffect hook
-  5. fetch data using axios
-  6. set the state using the useState hook (store the data)
+  1. X npm install axios (to fetch data)
+  2. X first import the useEffect hook
+  3. X we need to import useState, because our fetched data will be stored as a state (it is dynamic data)
+  4. X use the useEffect hook
+  5. X fetch data using axios
+  6. X set the state using the useState hook (store the data)
   7. How display the data that we fetched
+  8. catch and handle errors
+
+Happy path -> test -> Unhappy path (error handling, catch)
