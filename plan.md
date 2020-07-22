@@ -33,10 +33,17 @@ countWithoutSideEffect(3); // -> return 4
   - want to add an event listener to the entire screen
 
 - How does it work?
+
   - We call useEffect and we pass it a callback function
   - This function is performed by useEffect
   - It can be performed once,
   - or multiple times -> dependency array (we will explain)
 
-* How do we use a useEffect hook to fetch data
-* How display the data that we fetched
+- How do we use a useEffect hook to fetch data
+  1. npm install axios (to fetch data)
+  2. first import the useEffect hook
+  3. we need to import useState, because our fetched data will be stored as a state (it is dynamic data)
+  4. use the useEffect hook
+  5. fetch data using axios
+  6. set the state using the useState hook (store the data)
+  7. How display the data that we fetched
